@@ -1,0 +1,27 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "Blocking Invention Map",
+  description: "Interactive visualization of UltronAI's checkout product recognition patent blockers",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <body className="h-full">{children}</body>
+    </html>
+  );
+}
