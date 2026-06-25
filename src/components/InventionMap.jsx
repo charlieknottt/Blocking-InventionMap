@@ -135,7 +135,7 @@ export default function InventionMap() {
     const nodes = [], connections = [];
     const centerR = minDim * 0.085, coreR = minDim * 0.085, techR = minDim * 0.072, invR = minDim * 0.058;
 
-    nodes.push({ id: "center", x: cx, y: cy, radius: centerR, label: inventionData.center.label, shortLabel: "Checkout Product Recognition", data: inventionData.center, ring: "center", colorKey: "detection" });
+    nodes.push({ id: "center", x: cx, y: cy, radius: centerR, label: inventionData.center.label, shortLabel: "Retail Product Recognition", data: inventionData.center, ring: "center", colorKey: "detection" });
 
     let angleOff = -180;
     coreAreas.forEach((ca, ci) => {
