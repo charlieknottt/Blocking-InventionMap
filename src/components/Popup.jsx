@@ -110,17 +110,16 @@ export default function Popup({ node, colorKey, ring, onClose }) {
               <Paragraphs text={node.summary} />
             )}
 
-            {/* Invention: accomplishes / works / superior as plain paragraphs */}
-            {ring === "invention" && node.full && (
+            {/* Invention: verbatim merged-doc sections (accomplishes / why it works / engineering around it / inferior result) */}
+            {ring === "invention" && node.sections && (
               <div>
-                <SectionHeading color={c.accent}>What the invention accomplishes</SectionHeading>
-                <Paragraphs text={node.full.accomplishes} />
-                <Divider />
-                <SectionHeading color={c.accent}>Why it works</SectionHeading>
-                <Paragraphs text={node.full.works} />
-                <Divider />
-                <SectionHeading color={c.accent}>Why this produces a superior result</SectionHeading>
-                <Paragraphs text={node.full.superior} />
+                {node.sections.map((s, i) => (
+                  <div key={i}>
+                    {i > 0 && <Divider />}
+                    <SectionHeading color={c.accent}>{s.heading}</SectionHeading>
+                    <Paragraphs text={s.body} />
+                  </div>
+                ))}
               </div>
             )}
           </div>
