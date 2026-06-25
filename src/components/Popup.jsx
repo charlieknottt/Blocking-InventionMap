@@ -70,7 +70,7 @@ export default function Popup({ node, colorKey, ring, onClose }) {
                   {ring === "invention" && node.severity ? node.severity : (RING_LABELS[ring] || "Invention")}
                 </p>
                 <h2 className="text-[20px] font-semibold leading-tight" style={{ color: "#0f172a" }}>
-                  {ring === "invention" && node.patent ? `${node.patent} — ${node.label}` : node.label}
+                  {ring === "invention" && node.patent ? `${node.patent} — ${node.popupTitle || node.label}` : node.label}
                 </h2>
               </div>
               <button

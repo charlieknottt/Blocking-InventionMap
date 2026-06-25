@@ -1193,6 +1193,7 @@ export const inventionData = {
             },
             {
               id: "false-positive-latency",
+              popupTitle: "Reducing False Positives in Object Detection Frameworks",
               severity: "Important Blocker",
               patent: "US20240303979A1",
               label: "False Positive Suppression",
