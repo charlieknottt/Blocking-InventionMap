@@ -15,3 +15,6 @@ npm install
 npm run dev
 ```
 Open http://localhost:3000.
+
+## Live
+https://blocking-invention-map.vercel.app
